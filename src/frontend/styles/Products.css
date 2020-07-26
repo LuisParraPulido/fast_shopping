@@ -1,0 +1,77 @@
+.Products-order {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.Products-order select{
+    height: 50%;
+    margin-left: 15px;
+}
+
+
+.Products-items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    grid-row-gap: 1.5em;
+    display: grid;
+}
+.Products-item {
+    text-decoration: none;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    border-radius: 5px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    height: 250px;
+    width: 100%;
+}
+.Products-item-info {
+    width: 75%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Products-item-info h2 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+.Products-item-info h5 {
+    font-size: 15px;
+    margin: 0 0 10px 0;
+}
+
+.Products-item-info p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.Products-item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px 5px 0 0;
+    object-fit: contain;
+}
+
+.Products-item-info_button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #33b13a;
+}
+.Products-item-info_button button {
+    width: 100px;
+    height: 30px;
+    border-radius: 0px 0px 5px 5px;
+    border: 0px;
+    outline: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
+}
+.Products-item button:hover {
+    background-color: rgba(39,44,49,.06);
+}

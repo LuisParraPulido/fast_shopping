@@ -1,0 +1,46 @@
+
+
+
+.Customer-form {
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    padding: 15px;
+}
+
+.Customer-form_header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.Customer-form_old {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Customer-form_old-e {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+.Customer-form_old-e input {
+    width: 70%;
+    border: 2px solid grey;
+    margin-left: 10px;
+}
+
+.Customer-form_new {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: flex-end;
+}
+.Customer-form_new label {
+    text-align: end;
+}
+.Customer-form_new input {
+    margin: 20px 0 20px 20px;
+}

@@ -1,0 +1,11 @@
+.Thanks-main {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Thanks-main img {
+    width: 200px;
+}

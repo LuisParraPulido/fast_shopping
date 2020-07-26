@@ -1,0 +1,19 @@
+.Checkout-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.Checkout-main_table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.Checkout-main_table h2 {
+    margin-right: 10%;
+}
+
+.Checkout-main_button {
+    margin-right: 10%;
+}
