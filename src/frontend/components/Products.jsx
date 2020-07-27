@@ -24,9 +24,9 @@ const Products = (props) => {
   if(select.order === 'default') {
     products.sort((a, b) => a.id - b.id)
   }
-
+  
   const handleAddToCart = (product) => {
-    props.addToCart(product);
+    props.addToCart({"quantity": 1, product});
   }
 
   return (

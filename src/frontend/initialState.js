@@ -1,5 +1,7 @@
 export default {
     cart: [],
+    user:[],
+    order: [],
     products:[{
       id: 1,
       image: "https://cdn.pixabay.com/photo/2018/10/08/07/53/accessories-3732148_1280.jpg",
