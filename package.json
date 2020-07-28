@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
+    "front:build": "webpack-cli --config webpack.config.js",
     "server": "nodemon ./src/backend/index.js",
-    "build": "npm run server & npm run start"
+    "server:build": "node ./src/backend/index.js",
+    "build": "npm run server:build & npm run front:build"
   },
   "author": "Luis Alberto Parra Pulido",
   "license": "MIT",
