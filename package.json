@@ -9,7 +9,7 @@
     "server": "nodemon ./src/backend/index.js",
     "server:build": "node ./src/backend/index.js",
     "start:dev": "webpack-dev-server --open --mode development",
-    "build": "npm run server & npm run start:dev"
+    "build": "webpack-cli --config webpack.config.js"
   },
   "author": "Luis Alberto Parra Pulido",
   "license": "MIT",

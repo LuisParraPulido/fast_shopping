@@ -14,7 +14,7 @@ npm install
 
 ### Ejecución
 ```
-npm run build
+npm run start
 ```
 
 ### Licencia
