@@ -4,11 +4,12 @@
   "description": "small app which allows any user to make a purchase in a few steps.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "npm run server & npm run start:dev",
     "front:build": "webpack-cli --config webpack.config.js",
     "server": "nodemon ./src/backend/index.js",
     "server:build": "node ./src/backend/index.js",
-    "build": "npm run server:build & npm run front:build"
+    "start:dev": "webpack-dev-server --open --mode development",
+    "build": "npm run server & npm run start:dev"
   },
   "author": "Luis Alberto Parra Pulido",
   "license": "MIT",
