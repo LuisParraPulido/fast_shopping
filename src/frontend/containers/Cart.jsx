@@ -30,18 +30,18 @@ const Cart = (props) => {
 
   return (
     <>
-      <div className="Cart">
-        <div className="Cart-content">
+      <div className='Cart'>
+        <div className='Cart-content'>
           {cart.length > 0 ? <h3>Shopping Cart</h3> : <h2>There is not products</h2>}
           {cart.map(item => (
-            <div className="Cart-item">
+            <div className='Cart-item'>
               <img src={item.product.image} alt={item.product.name} />
-              <div className="Cart-element">
-                <div className="Cart-element_title">
+              <div className='Cart-element'>
+                <div className='Cart-element_title'>
                   <h4>{item.product.name}</h4>
                   <p>{item.product.category}</p>
                 </div>
-                <i className="fas fa-trash-alt" onClick={() => handleRemove(item.product.id)} />
+                <i className='fas fa-trash-alt' onClick={() => handleRemove(item.product.id)} />
                 <span>
                   <p>Unit Price</p>
                   $

@@ -4,17 +4,17 @@ import { connect } from 'react-redux';
 import '../styles/Header.css';
 
 const Header = (props) => (
-  <div className="Header">
-    <Link to="/">
+  <div className='Header'>
+    <Link to='/'>
       <h1>Fast Shopping</h1>
     </Link>
 
-    <div className="Header-checkout">
-      <Link to="/cart">
-        <i className="fas fa-shopping-cart" />
+    <div className='Header-checkout'>
+      <Link to='/cart'>
+        <i className='fas fa-shopping-cart' />
       </Link>
       {props.cart.length > 0 &&
-        <div className="Header-alert">{props.cart.length}</div>
+        <div className='Header-alert'>{props.cart.length}</div>
       }
     </div>
   </div>

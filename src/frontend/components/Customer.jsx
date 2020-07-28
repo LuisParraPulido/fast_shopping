@@ -21,11 +21,11 @@ const Customer = (props) => {
     return (
         <div className='Customer-main'>
             <h2>Customer Information</h2>
-            <form action="" className='Customer-form' >
+            <form action='' className='Customer-form' >
               <div className='Customer-form_header'>
-                <label htmlFor="customer">Are you?</label>
-                <input type="radio" name='customer' value='new' onInput={updateInput} /> New Customer
-                <input type="radio" name='customer' value='existing' onInput={updateInput}/> Existing Customer
+                <label htmlFor='customer'>Are you?</label>
+                <input type='radio' name='customer' value='new' onInput={updateInput} /> New Customer
+                <input type='radio' name='customer' value='existing' onInput={updateInput}/> Existing Customer
               </div>
               {form.customer === 'new' ? <NewUser /> : <SearchUser />}
             </form>

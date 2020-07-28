@@ -27,7 +27,6 @@ function addUsers(req, res) {
 
 function getUser(req, res) {
   const email = req.params
-  console.log(req.params)
   Controller.getUser(email)
     .then((item) => {
       res.status(200).send(item)

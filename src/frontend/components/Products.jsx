@@ -26,7 +26,7 @@ const Products = (props) => {
   }
   
   const handleAddToCart = (product) => {
-    props.addToCart({"quantity": 1, product});
+    props.addToCart({'quantity': 1, product});
   }
 
   return (
@@ -39,19 +39,19 @@ const Products = (props) => {
           <option value='recent'>Most recent</option>
         </select>
       </div>
-      <div className="Products">
-        <div className="Products-items">
+      <div className='Products'>
+        <div className='Products-items'>
           {products.map(product => (
-            <div className="Products-item" key={product.id}>
+            <div className='Products-item' key={product.id}>
               <img src={product.image} alt={product.name} />
-              <div className="Products-item-info">
-                <div className="Products-item-info_descript">
+              <div className='Products-item-info'>
+                <div className='Products-item-info_descript'>
                   <h2>{product.name}</h2>
                   <h5>{product.category}</h5> 
                   <p>{product.description}</p>
                 </div>
-                <div className="Products-item-info_button">
-                  <button type="button" onClick={() => handleAddToCart(product)}>Comprar</button>
+                <div className='Products-item-info_button'>
+                  <button type='button' onClick={() => handleAddToCart(product)}>Comprar</button>
                   <span>
                     $
                     {product.price}

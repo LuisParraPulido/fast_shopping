@@ -28,9 +28,9 @@ const SearchUser = (props) => {
     <>
       <form className='Customer-form_old' onSubmit={handleCustomer}>
         <div className='Customer-form_old-e'>
-          <label htmlFor="">Email*</label>
+          <label htmlFor=''>Email*</label>
           <input 
-            type="email"
+            type='email'
             name='email'
             onChange={updateInput}
             required

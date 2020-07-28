@@ -12,7 +12,7 @@ const Thanks = (props) => {
     }
     return (
         <div className='Thanks-main'>
-            <img src="https://images.emojiterra.com/google/android-oreo/512px/1f389.png" alt=""/>
+            <img src='https://images.emojiterra.com/google/android-oreo/512px/1f389.png' alt=''/>
             <h1>Thanks for your purchase</h1>
             <p>{order.email}, we have created your order #{order.id}. Your items will be soon at your door.</p>
             <h3>Stay safe</h3>

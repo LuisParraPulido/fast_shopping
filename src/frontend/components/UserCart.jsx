@@ -5,7 +5,7 @@ import '../styles/UserCart.css';
 const UserCart = (props) => {
   const { user } = props;
   return (
-    <div className="User-main">
+    <div className='User-main'>
       <h3>Welcome back, {user.name}</h3>
 
       <p>ID: {user.document}</p>

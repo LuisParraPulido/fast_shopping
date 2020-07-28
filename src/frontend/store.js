@@ -4,7 +4,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from './reducers/index';
 import initialState from './initialState';
-import regeneratorRuntime from "regenerator-runtime"
+import regeneratorRuntime from 'regenerator-runtime'
 
 const persistConfig = {
   key: 'root',
