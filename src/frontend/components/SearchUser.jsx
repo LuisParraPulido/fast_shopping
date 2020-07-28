@@ -20,7 +20,7 @@ const SearchUser = (props) => {
 
   const handleCustomer = (event) => {
     event.preventDefault();
-    props.searchUser(form.email);
+    props.searchUser(form);
   }
 
   
@@ -38,7 +38,7 @@ const SearchUser = (props) => {
         </div>
         <button>Lookup</button>
       </form>
-      {user.length > 0 && user[0].email !==undefined ? <UserCart /> : null}
+      {user.email !==undefined ? <UserCart /> : null}
     </>
   )
 }

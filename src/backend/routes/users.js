@@ -26,7 +26,8 @@ function addUsers(req, res) {
 }
 
 function getUser(req, res) {
-  const email = req.body
+  const email = req.params
+  console.log(req.params)
   Controller.getUser(email)
     .then((item) => {
       res.status(200).send(item)
@@ -38,7 +39,7 @@ function getUser(req, res) {
 
 
 router.get('/users', list);
-router.get('/users/user', getUser);
-router.put('/users', addUsers);
+router.get('/users/:email', getUser);
+router.post('/users', addUsers);
 
 module.exports = router;

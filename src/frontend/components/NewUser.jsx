@@ -28,7 +28,7 @@ const handleCustomer = (event) => {
 
 return (
   <>
-    {user.length > 0 && user[0].email !==undefined ? <UserCart />:
+    {user.email !==undefined ? <UserCart />:
     <form className='Customer-form_new' onSubmit={handleCustomer}>
       <label htmlFor="name">Full Name</label>
       <input 

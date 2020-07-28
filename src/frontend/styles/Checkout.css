@@ -17,3 +17,16 @@
 .Checkout-main_button {
     margin-right: 10%;
 }
+
+.Checkout-main_button button a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    .Checkout-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

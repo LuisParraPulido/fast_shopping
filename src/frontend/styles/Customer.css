@@ -1,6 +1,4 @@
 
-
-
 .Customer-form {
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
     padding: 15px;
@@ -43,4 +41,28 @@
 }
 .Customer-form_new input {
     margin: 20px 0 20px 20px;
+}
+
+.Customer-form_new button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 100px;
+    align-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .Customer-main {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .Customer-main {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Customer-main {
+        width: 90%;
+    }
 }

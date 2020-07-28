@@ -14,39 +14,95 @@ export const changeQuantity = payload => ({
   type: 'CHANGE_QUANTITY',
   payload,
 })
-
-export const createUser = payload => ({
-  type: 'CREATE_USER',
-  payload,
-})
-
-export const searchUser = payload => ({
-  type: 'SEARCH_USER',
-  payload,
-})
-
-export const createOrder = payload => ({
-  type: 'CREATE_ORDER',
-  payload,
-})
 export const clearState = payload => ({
   type: 'CLEAR_STATE',
   payload,
 })
 
-
-  
-  
 export const getProducts = () => {
   return async (dispatch) => {
+    dispatch({
+      type: 'loading',
+    });
+    const URL = 'http://localhost:3000/products';
     try {
-      const response = await axios.get('http://localhost:3000/products');
+      const res = await axios.get(URL);
       dispatch({
-        type: GET_PRODUCTS,
-        payload: response,
+        type: 'GET_PRODUCTS',
+        payload: res.data,
       })
     } catch (error) {
-      console.error(error)
+      dispatch({
+        type: 'error',
+        payload: error.message,
+      })
+    }
+  }
+}
+
+export const createUser = (form) => {
+  return async (dispatch) => {
+    dispatch({
+      type: 'loading',
+    });
+    const URL = 'http://localhost:3000/users';
+    try {
+      const res = await axios.post(URL, form);
+      dispatch({
+        type: 'CREATE_USER',
+        payload: res.data,
+      })
+    } catch (error) {
+      dispatch({
+        type: 'error',
+        payload: error.message,
+      })
+    }
+  }
+}
+
+export const searchUser = (form) => {
+  return async (dispatch) => {
+    dispatch({
+      type: 'loading',
+    });
+    const URL = `http://localhost:3000/users/${form.email}`;
+    try {
+      const res = await axios.get(URL);
+      dispatch({
+        type: 'SEARCH_USER',
+        payload: res.data,
+      })
+    } catch (error) {
+      dispatch({
+        type: 'error',
+        payload: error.message,
+      })
+    }
+  }
+}
+
+export const createOrder = (form) => {
+  return async (dispatch) => {
+    dispatch({
+      type: 'loading',
+    });
+    const URL = `http://localhost:3000/orders`;
+    const data = {
+      email: form[0].email,
+      cart: {...form[1]}
+    }
+    try {
+      const res = await axios.post(URL, data);
+      dispatch({
+        type: 'CREATE_ORDER',
+        payload: res.data,
+      })
+    } catch (error) {
+      dispatch({
+        type: 'error',
+        payload: error.message,
+      })
     }
   }
 }

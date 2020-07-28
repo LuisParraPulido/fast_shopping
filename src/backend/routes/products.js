@@ -28,6 +28,6 @@ function addProduct(req, res) {
 
 
 router.get('/products', list);
-router.put('/products', addProduct);
+router.post('/products', addProduct);
 
 module.exports = router;

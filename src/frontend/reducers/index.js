@@ -4,7 +4,7 @@ const reducer = (state, action) => {
       case 'GET_PRODUCTS':
         return {
           ...state,
-          products: [...state.products, action.payload]
+          products: action.payload
         }
       case 'ADD_TO_CART':
         let item = state.cart.findIndex((element) => element.product.id === action.payload.product.id);
@@ -22,7 +22,7 @@ const reducer = (state, action) => {
           cart: state.cart.filter((products) => products.product.id !== action.payload),
         }
       case 'CHANGE_QUANTITY':
-        let quantity = state.cart.findIndex((element) => element.product.id === parseInt(action.payload[1]));
+        let quantity = state.cart.findIndex((element) => element.product.id === action.payload[1]);
         if(quantity !== -1) {
           state.cart[quantity].quantity = parseInt(action.payload[0])
         } else {
@@ -33,26 +33,25 @@ const reducer = (state, action) => {
       case 'CREATE_USER':
         return {
           ...state,
-          user: [action.payload]
+          user: action.payload
         }
       case 'SEARCH_USER':
-        let user = state.user.find((user) => user.email === action.payload.email)
-        console.log(user)
-        if (user === undefined) {
+        if(action.payload.length > 0) {
           return {
             ...state,
-            user: []
+            user: action.payload[0]
           }
         } else {
           return {
             ...state,
-            user: user
+            user: []
           }
+
         }
       case 'CREATE_ORDER':
         return {
           ...state,
-          order: [1,action.payload[0],action.payload[1]]
+          order: action.payload
         }
       case 'CLEAR_STATE':
         return {

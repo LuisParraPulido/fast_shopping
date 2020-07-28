@@ -53,7 +53,7 @@
     width: 250px;
     height: 250px;
     border-radius: 5px 5px 0 0;
-    object-fit: contain;
+    object-fit: cover
 }
 
 .Products-item-info_button {
@@ -74,4 +74,22 @@
 }
 .Products-item button:hover {
     background-color: rgba(39,44,49,.06);
+}
+
+@media screen and (max-width: 1024px) {
+    .Products-items {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        grid-row-gap: 1.5em;
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Products-item {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        
+    }
 }

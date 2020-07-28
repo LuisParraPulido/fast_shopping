@@ -9,3 +9,14 @@
 .Thanks-main img {
     width: 200px;
 }
+
+.Thanks-main button a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    .Thanks-main {
+        text-align: center;
+    }
+}

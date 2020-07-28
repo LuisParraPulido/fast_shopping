@@ -1,18 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import '../styles/UserCart.css';
 
 const UserCart = (props) => {
   const { user } = props;
   return (
-    <div>
-      <h4>Welcome back, {user[0].name}</h4>
+    <div className="User-main">
+      <h3>Welcome back, {user.name}</h3>
 
-      <p>ID: {user[0].document}</p>
-      <p>Address: {user[0].address}</p>
-      <p>Phone Number: {user[0].phone}</p>
-      <p>Email: {user[0].email}</p>
+      <p>ID: {user.document}</p>
+      <p>Address: {user.address}</p>
+      <p>Phone Number: {user.phone_number}</p>
+      <p>Email: {user.email}</p>
 
-      <h6>Not {user[0].name}? Lookup again</h6>
+      <h6>Not {user.name}? Lookup again</h6>
     </div>
   )
 }

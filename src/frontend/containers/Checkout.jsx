@@ -12,7 +12,7 @@ const Checkout = (props) => {
   
   const handleOrder = (event) => {
     event.preventDefault();
-    props.createOrder([user[0].email, cart]);
+    props.createOrder([user, cart]);
   }
   return (
     <div className='Checkout-main'>

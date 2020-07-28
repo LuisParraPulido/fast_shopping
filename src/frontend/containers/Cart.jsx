@@ -37,7 +37,7 @@ const Cart = (props) => {
             <div className="Cart-item">
               <img src={item.product.image} alt={item.product.name} />
               <div className="Cart-element">
-                <div>
+                <div className="Cart-element_title">
                   <h4>{item.product.name}</h4>
                   <p>{item.product.category}</p>
                 </div>
@@ -47,7 +47,7 @@ const Cart = (props) => {
                   $
                   {item.product.price}
                 </span>
-                <div>
+                <div className='Cart-element_quantity'>
                   <p>Qty</p>
                   <select name='quantity' defaultValue={[item.quantity, item.product.id]} onChange={updateIpunt} onInput={handleQuantity(changeQ)}>
                     <option value={[1,item.product.id]}>1</option>
@@ -65,16 +65,16 @@ const Cart = (props) => {
       </div>
       <div className='Cart-cart'>
         <Link to='/'><h4>Continue Shopping</h4></Link>
-      </div>
-      {cart.length > 0 ? 
-        <div className='Cart-button'>
-          {cart.map(item => {
-            total = (item.product.price * item.quantity) + total;
+        {cart.length > 0 ? 
+          <div className='Cart-button'>
+            {cart.map(item => {
+              total = (item.product.price * item.quantity) + total;
           })}
           <h3>Total: ${total.toFixed(2)}</h3>
           <Link to='/checkout'><button>Check Out</button></Link> 
         </div>
       : null}
+      </div>
     
     </>
   )

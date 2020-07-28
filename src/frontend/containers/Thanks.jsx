@@ -14,7 +14,7 @@ const Thanks = (props) => {
         <div className='Thanks-main'>
             <img src="https://images.emojiterra.com/google/android-oreo/512px/1f389.png" alt=""/>
             <h1>Thanks for your purchase</h1>
-            <p>{order[1]}, we have created your order #{order[0]}. Your items will be soon at your dor¿or.</p>
+            <p>{order.email}, we have created your order #{order.id}. Your items will be soon at your door.</p>
             <h3>Stay safe</h3>
             
             <button onClick={handleClear}><Link to='/'>Start Again </Link></button>

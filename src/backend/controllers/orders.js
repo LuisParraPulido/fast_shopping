@@ -20,8 +20,7 @@ function controller() {
     const order = {
       id: nanoid(),
       email: body.email,
-      cart: body.cart,
-      date: new Date(),
+      cart: JSON.stringify(body.cart),
     }
 
     const addOrder = await store.insert(TABLE, order)

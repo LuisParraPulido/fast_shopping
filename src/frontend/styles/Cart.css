@@ -5,13 +5,17 @@
 }
 .Cart-item {
     margin: 15px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr );
     justify-content: space-between;
     align-items: center;
     box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
 }
 .Cart-item img {
     height: 100px;
+    width: 100%;
+    object-fit: cover;
+    margin-left: -10px;
 }
 .Cart-item p {
     margin: 0 5px 0 0;
@@ -21,15 +25,24 @@
 }
 .Cart-element {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-template-columns: repeat(6, 1fr );
     justify-content: space-around;
     align-items: center;
+}
+.Cart-element_title {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 .fas {
     margin: 0 0 0 10px;
     color:  rgba(0,0,0,.4);
     cursor: pointer;
+    grid-column-start: 3;
 }
+
 .Cart-item-element {
     display: flex;
     justify-content: space-between;
@@ -51,9 +64,29 @@ button {
     display: flex;
     justify-content: space-between;
 }
+.Cart-cart a {
+    font-size: 14px;
+}
 .Cart-button {
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+@media screen and (max-width: 500px) {
+    .Cart-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .Cart-element {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .Cart-element * {
+        margin-bottom: 10px;
+        align-items: center;
+        text-align: center;
+    }
 }

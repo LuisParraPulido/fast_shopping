@@ -56,7 +56,7 @@ function insert(table, data) {
     return new Promise((resolve, reject) => {
         connection.query(`INSERT INTO ${table} SET ?`, data, (err, result) => {
             if (err) return reject(err);
-            resolve(result);
+            resolve(data);
         })
     })
 }

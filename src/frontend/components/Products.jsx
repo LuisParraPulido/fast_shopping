@@ -22,7 +22,7 @@ const Products = (props) => {
     products.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
   }
   if(select.order === 'default') {
-    products.sort((a, b) => a.id - b.id)
+    products.sort((a, b) => a.name.localeCompare(b.name))
   }
   
   const handleAddToCart = (product) => {
