@@ -24,7 +24,7 @@ export const getProducts = () => {
     dispatch({
       type: 'loading',
     });
-    const URL = 'http://localhost:3000/products';
+    const URL = 'http://35.238.74.239/products';
     try {
       const res = await axios.get(URL);
       dispatch({
@@ -45,7 +45,7 @@ export const createUser = (form) => {
     dispatch({
       type: 'loading',
     });
-    const URL = 'http://localhost:3000/users';
+    const URL = 'http://35.238.74.239/users';
     try {
       const res = await axios.post(URL, form);
       dispatch({
@@ -66,7 +66,7 @@ export const searchUser = (form) => {
     dispatch({
       type: 'loading',
     });
-    const URL = `http://localhost:3000/users/${form.email}`;
+    const URL = `http://35.238.74.239/users/${form.email}`;
     try {
       const res = await axios.get(URL);
       dispatch({
@@ -87,7 +87,7 @@ export const createOrder = (form) => {
     dispatch({
       type: 'loading',
     });
-    const URL = `http://localhost:3000/orders`;
+    const URL = `http://35.238.74.239/orders`;
     const data = {
       email: form[0].email,
       cart: {...form[1]}
