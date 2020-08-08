@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const API = 'http://104.197.50.247/';
+
 export const addToCart = payload => ({
     type: 'ADD_TO_CART',
     payload,
@@ -24,7 +26,7 @@ export const getProducts = () => {
     dispatch({
       type: 'loading',
     });
-    const URL = 'http://35.238.74.239/products';
+    const URL = `${API}products`;
     try {
       const res = await axios.get(URL);
       dispatch({
@@ -45,7 +47,7 @@ export const createUser = (form) => {
     dispatch({
       type: 'loading',
     });
-    const URL = 'http://35.238.74.239/users';
+    const URL = `${API}users`;
     try {
       const res = await axios.post(URL, form);
       dispatch({
@@ -66,7 +68,7 @@ export const searchUser = (form) => {
     dispatch({
       type: 'loading',
     });
-    const URL = `http://35.238.74.239/users/${form.email}`;
+    const URL = `${API}users/${form.email}`;
     try {
       const res = await axios.get(URL);
       dispatch({
@@ -87,7 +89,7 @@ export const createOrder = (form) => {
     dispatch({
       type: 'loading',
     });
-    const URL = `http://35.238.74.239/orders`;
+    const URL = `${API}orders`;
     const data = {
       email: form[0].email,
       cart: {...form[1]}
