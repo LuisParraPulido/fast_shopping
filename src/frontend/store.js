@@ -6,6 +6,8 @@ import rootReducer from './reducers/index';
 import initialState from './initialState';
 import regeneratorRuntime from 'regenerator-runtime'
 
+
+
 const persistConfig = {
   key: 'root',
   storage,
