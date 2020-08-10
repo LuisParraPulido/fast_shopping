@@ -4,9 +4,9 @@
   "description": "small app which allows any user to make a purchase in a few steps.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run server & npm run start:dev",
+    "start": "npm run build",
     "front:build": "webpack-cli --config webpack.config.js",
-    "server": "nodemon ./src/backend/index.js",
+    "server": "node ./src/backend/index.js",
     "server:build": "node ./src/backend/index.js",
     "start:dev": "webpack-dev-server --open --mode development",
     "build": "webpack-cli --config webpack.config.js"
@@ -17,6 +17,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@google-cloud/storage": "^5.2.0",
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",

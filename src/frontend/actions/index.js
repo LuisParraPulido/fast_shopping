@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = 'http://104.197.50.247/';
+const API = 'https://backend-node-dot-fast-shopping-backend.uc.r.appspot.com/';
 
 export const addToCart = payload => ({
     type: 'ADD_TO_CART',
